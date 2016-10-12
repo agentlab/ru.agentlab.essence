@@ -1,0 +1,5 @@
+(defmodule "MYESSENCEMODEL"
+	:documentation "Preliminary representation of OMG Essence Language v1.1."
+	:includes ("ESSENCE-KERNEL" "ESSENCE-REPRESENTATION")
+)
+

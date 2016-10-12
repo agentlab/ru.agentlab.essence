@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AgentLab Essence Ontology
+Bundle-SymbolicName: ru.agentlab.essence.onto
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: AgentLab
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: edu.isi.powerloom,
+ edu.isi.powerloom.logic,
+ edu.isi.powerloom.server.plsoap,
+ edu.isi.stella,
+ edu.isi.stella.javalib,
+ org.powerloom.service
+Export-Package: ru.agentlab.essence.onto

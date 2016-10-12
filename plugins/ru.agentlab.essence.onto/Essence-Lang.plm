@@ -1,0 +1,48 @@
+(defmodule "ESSENCE-LANG"
+	:documentation "Preliminary representation of OMG Essence Language v1.1."
+	:includes ("PL-KERNEL-KB")
+)
+(in-module "ESSENCE-LANG")
+
+(DEFCONCEPT Element)
+
+(DEFCONCEPT Alpha (?e Element))
+(DEFCONCEPT AlphaState (?e Element))
+(DEFCONCEPT WorkProduct (?e Element))
+(DEFCONCEPT Activity (?e Element))
+(DEFCONCEPT ActivitySpace (?e Element))
+(DEFCONCEPT Competency (?e Element))
+
+(DEFCONCEPT Resource)
+(DEFCONCEPT Pattern)
+
+(DEFCONCEPT Kernel)
+(DEFCONCEPT Library)
+(DEFCONCEPT Practice)
+(DEFCONCEPT Method)
+(DEFCONCEPT PracticeAsset)
+(DEFCONCEPT Tag)
+
+(DEFCONCEPT AreaOfConcern)
+
+(DEFRELATION alphaHasState ((?alpha Alpha) (?alphaState AlphaState)))
+(DEFRELATION alphaOrganizesWorkProduct ((?alpha Alpha) (?wp WorkProduct)))
+(DEFRELATION stateCausality ((?predesessorAlphaState AlphaState) (?sucessorAlphaState AlphaState)))
+(DEFRELATION workProductDescribesAlpha ((?wp WorkProduct) (?alpha Alpha)))
+
+(DEFRELATION workProductEvidencesAlphaState ((?wp WorkProduct) (?alphaState AlphaState)))
+
+(DEFRELATION activitySpaceProducesWorkProduct ((?actSpace ActivitySpace) (?wp WorkProduct)))
+(DEFRELATION activitySpaceUpdatesWorkProduct ((?actSpace ActivitySpace) (?wp WorkProduct)))
+
+(DEFRELATION activitySpaceOrganizesActivity ((?actSpace ActivitySpace) (?activity Activity)))
+(DEFRELATION activitySpaceTargetsAlphaState ((?actSpace ActivitySpace) (?alphaState AlphaState)))
+
+(DEFRELATION alphaStateProgressedByActivity ((?alphaState AlphaState) (?activity Activity)))
+(DEFRELATION activityResultsInAlphaState ((?activity Activity) (?alphaState AlphaState)))
+
+(DEFRELATION activityRequiresCompetency ((?activity Activity) (?competency Competency)))
+
+(DEFRELATION alphaContainsSubAlpha ((?containerAplha Aplha) (?containeeAlpha Aplha)))
+
+(DEFRELATION areaOfConcernContainsElement ((?areaOfConcern AreaOfConcern) (?element Element)))

@@ -1,0 +1,25 @@
+(defmodule "SYSTEM-ESSENCE-KERNEL"
+	:documentation "Preliminary representation of OMG Essence Language v1.1."
+	:includes ("ESSENCE-LANG")
+)
+(in-module "SYSTEM-ESSENCE-KERNEL")
+
+(assert (Alpha Opportunity))
+(assert (Alpha Stakeholders))
+(assert (Alpha SystemDefinition))
+(assert (Alpha SystemRealization))
+(assert (Alpha Team))
+(assert (Alpha Work))
+(assert (Alpha Technology))
+
+(assert (AreaOfConcern Customer))
+(assert (AreaOfConcern Solution))
+(assert (AreaOfConcern Endeavor))
+
+(assert (areaOfConcernContainsElement Customer Opportunity))
+(assert (areaOfConcernContainsElement Customer Stakeholders))
+(assert (areaOfConcernContainsElement Solution SystemDefinition))
+(assert (areaOfConcernContainsElement Solution SystemRealization))
+(assert (areaOfConcernContainsElement Endeavor Team))
+(assert (areaOfConcernContainsElement Endeavor Work))
+(assert (areaOfConcernContainsElement Endeavor Technology))

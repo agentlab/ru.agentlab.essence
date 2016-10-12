@@ -1,0 +1,15 @@
+(defmodule "ESSENCE-REPRESENTATION"
+	:documentation "Preliminary representation of OMG Essence Language v1.1."
+	:includes ("ESSENCE-LANG" "REPRESENTATION")
+)
+(in-module "ESSENCE-REPRESENTATION")
+
+(assert (alphaImage Image))
+(assert (imageHasUrl alphaImage "http://agentlab.ru/essence/alpha.png"))
+(assert (classHasImage Alpha alphaImage))
+
+(assert (competencyImage Image))
+(assert (imageHasUrl competencyImage "http://agentlab.ru/essence/competency.png"))
+(assert (classHasImage Competency competencyImage))
+
+(assert (isAContainmentRelation areaOfConcernContainsElement))

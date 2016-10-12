@@ -1,0 +1,15 @@
+(defmodule "REPRESENTATION"
+	:documentation "Preliminary representation graphical representation."
+	:includes ("PL-KERNEL-KB")
+)
+(in-module "REPRESENTATION")
+
+(DEFCONCEPT TableSheet)
+(DEFCONCEPT Image)
+
+(DEFRELATION imageHasUrl ((?image Image) (?url String)))
+(DEFRELATION classHasImage ((?class Class) (?image Image)))
+
+(DEFRELATION isAContainmentRelation ((?r RELATION)))
+
+(DEFCONCEPT Diagram)
