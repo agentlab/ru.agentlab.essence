@@ -4,7 +4,6 @@
 )
 (in-module "REPRESENTATION")
 
-(DEFCONCEPT TableSheet)
 (DEFCONCEPT Image)
 
 (DEFRELATION imageHasUrl ((?image Image) (?url String)))
@@ -13,3 +12,14 @@
 (DEFRELATION isAContainmentRelation ((?r RELATION)))
 
 (DEFCONCEPT Diagram)
+
+
+(DEFCONCEPT TableDescription)
+(DEFCONCEPT TableMapping)
+(DEFCONCEPT TableLineMapping (?tm TableMapping))
+(DEFCONCEPT TableColumnMapping (?tm TableMapping))
+
+(DEFRELATION tableDescriptionHasName ((?td TableDescription) (?n STRING)))
+(DEFRELATION tableDescriptionHasLineMapping ((?td TableDescription) (?tlm TableLineMapping)))
+(DEFRELATION tableDescriptionHasColumnMapping ((?td TableDescription) (?tcm TableColumnMapping)))
+(DEFRELATION tableMappingHasQuery ((?tm TableMapping) (?q STRING)))
